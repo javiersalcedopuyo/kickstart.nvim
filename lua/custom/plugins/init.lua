@@ -15,9 +15,6 @@ vim.keymap.set('n', 'tn', ':tabnew<Space><CR>')
 vim.keymap.set('n', 'tk', 'gt')
 vim.keymap.set('n', 'tj', 'gT')
 
--- Back to normal mode from terminal mode
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
-
 vim.o.relativenumber = true
 vim.o.colorcolumn = '80,100'
 
