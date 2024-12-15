@@ -40,6 +40,15 @@ vim.keymap.set(
     end,
     {desc = '[O]pen [T]erminal'})
 
+-- Don't display the line numbers in terminal mode
+vim.api.nvim_create_autocmd( 'TermOpen', {
+    desc = '',
+    group = vim.api.nvim_create_augroup('custom_term_open', { clear = true }),
+    callback = function ()
+        vim.opt.number = false
+        vim.opt.relativenumber = false
+    end})
+
 -- More plugins
 return {
     'dominikduda/vim_current_word',             -- Highlights instances of the word under cursor
