@@ -87,8 +87,8 @@ return {
         name = 'solarized',
         priority = 1000,
         config = function ()
-            vim.cmd.colorscheme 'solarized'
-            vim.o.background = 'dark'
+            -- vim.cmd.colorscheme 'solarized'
+            -- vim.o.background = 'dark'
         end
     },
     -- Catppuccin
@@ -97,7 +97,8 @@ return {
         name = 'catppuccin',
         priority = 1000,
         config = function ()
-            -- vim.cmd.colorscheme 'catppuccin'
+            vim.cmd.colorscheme 'catppuccin-frappe'
+            vim.o.background = 'dark'
         end
     },
 }
