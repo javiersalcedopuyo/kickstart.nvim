@@ -32,6 +32,17 @@ vim.o.ts            = 4 -- Number of spaces a Tab is *displayed* as
 
 vim.o.autoread = true -- Auto reload a file when it's changed outside nvim
 
+vim.keymap.set(
+    'n',
+    '<Leader>ot',
+    function()
+        vim.cmd.new()
+        vim.cmd.term()
+        vim.cmd.wincmd("J") -- Move the new split to the bottom
+        vim.api.nvim_win_set_height(0, 15)
+    end,
+    {desc = '[O]pen [T]erminal'})
+
 -- More plugins
 return {
     'dominikduda/vim_current_word',             -- Highlights instances of the word under cursor
