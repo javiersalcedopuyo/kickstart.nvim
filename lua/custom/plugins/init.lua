@@ -49,6 +49,16 @@ vim.api.nvim_create_autocmd( 'TermOpen', {
         vim.opt.relativenumber = false
     end})
 
+
+vim.api.nvim_create_user_command(
+    "CopyFilePath",
+    function ()
+        local path = vim.fn.expand( "%:p" )
+        vim.fn.setreg( "+", path )
+    end,
+    {})
+
+
 -- More plugins
 return {
     'dominikduda/vim_current_word',             -- Highlights instances of the word under cursor
