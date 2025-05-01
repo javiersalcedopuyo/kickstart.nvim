@@ -58,6 +58,11 @@ vim.api.nvim_create_user_command(
     end,
     {})
 
+vim.diagnostic.config({
+    virtual_lines = true
+})
+
+
 vim.o.guifont = "Cascadia Code:h12"
 if vim.g.neovide then
     vim.g.neovide_scroll_animation_length = 0.1
