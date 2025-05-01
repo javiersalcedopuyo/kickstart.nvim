@@ -58,6 +58,13 @@ vim.api.nvim_create_user_command(
     end,
     {})
 
+vim.o.guifont = "Cascadia Code:h12"
+if vim.g.neovide then
+    vim.g.neovide_scroll_animation_length = 0.1
+    vim.g.neovide_cursor_animation_length = 0.05
+    vim.g.neovide_cursor_trail_size = 0.025
+    vim.g.neovide_cursor_smooth_blink = true
+end
 
 -- More plugins
 return {
