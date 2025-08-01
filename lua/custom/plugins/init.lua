@@ -58,6 +58,24 @@ vim.api.nvim_create_user_command(
     end,
     {})
 
+vim.api.nvim_create_user_command(
+    "ToggleTransparencyOn",
+    function ()
+        vim.api.nvim_set_hl( 0, "Normal",      { guibg = NONE } )
+        vim.api.nvim_set_hl( 0, "NormalFloat", { guibg = NONE } )
+        vim.api.nvim_set_hl( 0, "FloatBorder", { guibg = NONE } )
+        vim.api.nvim_set_hl( 0, "SignColumn",  { guibg = NONE } )
+        vim.api.nvim_set_hl( 0, "Pmenu",       { guibg = NONE } ) -- The autocomplete popup
+    end,
+    {})
+
+vim.api.nvim_create_user_command(
+    "ToggleTransparencyOff",
+    function ()
+        vim.cmd( "colorscheme " .. vim.g.colors_name )
+    end,
+    {})
+
 vim.diagnostic.config({
     virtual_lines = true
 })
