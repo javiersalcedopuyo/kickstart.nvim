@@ -16,7 +16,7 @@ vim.keymap.set('n', 'tk', 'gt')
 vim.keymap.set('n', 'tj', 'gT')
 
 vim.o.relativenumber = true
-vim.o.colorcolumn = '80,100'
+vim.o.colorcolumn = '100'
 
 vim.o.autoindent        = true
 vim.o.copyindent        = true
@@ -89,6 +89,8 @@ if vim.g.neovide then
     vim.g.neovide_cursor_smooth_blink = true
 end
 
+vim.o.winborder = "rounded"
+
 -- More plugins
 return {
     'dominikduda/vim_current_word',             -- Highlights instances of the word under cursor
@@ -137,8 +139,8 @@ return {
         name = 'catppuccin',
         priority = 1000,
         config = function ()
-            vim.cmd.colorscheme 'catppuccin-frappe'
-            vim.o.background = 'dark'
+            -- vim.cmd.colorscheme 'catppuccin-frappe'
+            -- vim.o.background = 'dark'
         end
     },
 }
